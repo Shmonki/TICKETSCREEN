@@ -901,23 +901,3 @@ input:focus {
   100% { opacity: 0.6; }
 }
 
-
-#qr-gif {
-  transition: opacity 0.3s;
-  width: 100%; /* Подстройте под ваш макет */
-  height: auto;
-}
-
-#qr-gif:active {
-  opacity: 0.9; /* Визуальная обратная связь */
-}
-
-
-#qr-video {
-  transition: opacity 0.3s;
-  background: #f0f0f0 url('loading-spinner.svg') center no-repeat;
-}
-
-#qr-video[data-loaded="true"] {
-  background: none;
-}
