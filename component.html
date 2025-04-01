@@ -192,7 +192,6 @@ function handleSwipe(deltaX) {
     <img 
       id="qr-gif" 
       src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg" 
-      alt="QR код"
       onclick="playGif()"
       style="cursor: pointer"
     >
@@ -206,7 +205,7 @@ function playGif() {
   if(isPlaying) return;
   
   const gif = document.getElementById('qr-gif');
-  const originalSrc = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg';
+  const originalSrc = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20anim.gif';
   const gifSrc = 'animation.gif';
   
   // Начать воспроизведение
