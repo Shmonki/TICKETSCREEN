@@ -886,18 +886,18 @@ input:focus {
 @media (hover: none) {
   .frame-20__secret-drug-area,
   .frame-1__drug-container {
-    width: 30px;
+    width: 50px;
   }
 }
 
 
 .frame-20__annotation-2 {
-  animation: pulse 5s infinite;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
-  0% { opacity: 0.3; }
+  0% { opacity: 0.6; }
   50% { opacity: 1; }
-  100% { opacity: 0.3; }
+  100% { opacity: 0.6; }
 }
 
