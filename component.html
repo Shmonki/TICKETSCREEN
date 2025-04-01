@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <!-- Добавить в head -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,6 +187,22 @@ function handleSwipe(deltaX) {
   
   
   
+  
+  <div class="frame-1__qr-container">
+  <div class="frame-1__qr-container2">
+    <!-- Статичное изображение и гифка -->
+    <img 
+      id="qr-gif" 
+      src="ttps://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg" 
+      alt="QR код"
+      onclick="playGif()"
+      style="cursor: pointer"
+    >
+  </div>
+</div>
+
+  
+  
   <!-- В component.html заменяем блок с QR -->
 <div class="frame-1__qr-container">
   <div class="frame-1__qr-container2">
@@ -190,7 +210,7 @@ function handleSwipe(deltaX) {
       id="qr-video"
       width="300" 
       height="300"
-      poster="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg"
+      poster="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/IMG_2750%20(2).webm"
       style="cursor: pointer"
       onclick="playAnimation()"
       playsinline

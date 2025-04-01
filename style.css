@@ -912,3 +912,12 @@ input:focus {
   opacity: 0.9; /* Визуальная обратная связь */
 }
 
+
+#qr-video {
+  transition: opacity 0.3s;
+  background: #f0f0f0 url('loading-spinner.svg') center no-repeat;
+}
+
+#qr-video[data-loaded="true"] {
+  background: none;
+}
