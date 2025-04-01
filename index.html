@@ -116,109 +116,88 @@
     <div class="frame-20__annotation-1">настройки</div>
   </div>
   
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="vars.css">
-  <link rel="stylesheet" href="style.css">
   
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="frame-1">
-    <div class="frame-1__blankscreen">
-      <img class="frame-1__blankscreen2" src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/blankscreen1.png" />
-    </div>
-    <div class="frame-1__fevralyacontainer">
-      <div class="frame-1__fevralyacontainer2"></div>
-    </div>
-    <div class="frame-1___30-container">
-      <div class="frame-1___30-container2"></div>
-    </div>
-    <div class="frame-1__text">
-      <div class="frame-1__text2">февраля</div>
-    </div>
-    <div class="frame-1___30-text">
-      <div class="frame-1___30-text2">30</div>
-    </div>
-    <div class="frame-1__fevralyacontainer3">
-      <div class="frame-1__fevralyacontainer2"></div>
-    </div>
-    <div class="frame-1___29-container">
-      <div class="frame-1___29-container2"></div>
-    </div>
-    <div class="frame-1__text3">
-      <div class="frame-1__text4">февраля</div>
-    </div>
-    <div class="frame-1__station-2-container">
-      <div class="frame-1__station-2-container2"></div>
-    </div>
-    <div class="frame-1___29-text">
-      <div class="frame-1___29-text2">29</div>
-    </div>
-    <div class="frame-1__station-2-text">
-      <div class="frame-1__station-2-text2">- Парголово</div>
-    </div>
-    <div class="frame-1__station-1-container">
-      <div class="frame-1__station-1-container2"></div>
-    </div>
-    <div class="frame-1__text5">
-      <div class="frame-1__text6">Финляндский вокзал</div>
-    </div>
-    <div class="frame-1__price-container">
-      <div class="frame-1__price-container2"></div>
-    </div>
-    <div class="frame-1___48-text">
-      <div class="frame-1___48-text2">48</div>
-    </div>
-    <div class="frame-1__qr-container">
-      <div class="frame-1__qr-container2"></div>
-    </div>
-    <div class="frame-1__drug-container">
-      <div class="frame-1__drug-container2"></div>
-    </div>
+  
+  
+  <!-- Внутри тега body заменим блоки с вводом данных -->
+<div class="frame-20">
+  <!-- ... остальные элементы ... -->
+
+  <!-- Поле "Куда" -->
+  <div class="frame-20__frame-3">
+    <input 
+      type="text" 
+      id="input-kuda" 
+      class="frame-20__input-area-kuda"
+      placeholder="КУДА"
+    >
   </div>
+
+  <!-- Поле "Откуда" -->
+  <div class="frame-20__frame-5">
+    <input 
+      type="number" 
+      id="input-otkuda" 
+      class="frame-20__input-area-otkuda"
+      placeholder="ОТКУДА (ЧИСЛО)"
+    >
+  </div>
+
+  <!-- Поле "Цена" -->
+  <div class="frame-20__frame-7">
+    <input 
+      type="number" 
+      id="input-price" 
+      class="frame-20__input-area-price"
+      placeholder="ЦЕНА (ЧИСЛО)"
+    >
+  </div>
+
+  <!-- Кнопка (добавим обработчик) -->
+  <div class="frame-20__button-startuem" onclick="checkForm()">
+    <div class="frame-20__div">СТАРТУЕМ!</div>
+  </div>
+
+  <!-- Блок для ошибок -->
+  <div id="error-message" style="display: none; color: red; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);"></div>
+</div>
+
+<script>
+function checkForm() {
+  // Получаем значения
+  const kuda = document.getElementById('input-kuda').value;
+  const otkuda = document.getElementById('input-otkuda').value;
+  const price = document.getElementById('input-price').value;
+  const errorBlock = document.getElementById('error-message');
+
+  // Проверяем заполнение
+  let errorText = '';
+  if (!kuda) errorText = 'ВВЕДИТЕ "КУДА"';
+  else if (!otkuda) errorText = 'ВВЕДИТЕ "ОТКУДА"';
+  else if (!price) errorText = 'ВВЕДИТЕ "ЦЕНУ"';
+
+  if (errorText) {
+    errorBlock.textContent = errorText;
+    errorBlock.style.display = 'block';
+    return;
+  }
+
+  // Сохраняем данные и переходим
+  localStorage.setItem('formData', JSON.stringify({kuda, otkuda, price}));
+  window.location.href = 'component.html';
+}
+</script>
+  
+  
   
 </body>
 </html>
+
+
+
+
+
+
+
+
+

@@ -842,3 +842,31 @@
   bottom: 0%;
   top: 0%;
 }
+
+
+/* Стили для полей ввода */
+.frame-20__input-area-kuda,
+.frame-20__input-area-otkuda,
+.frame-20__input-area-price {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+}
+
+/* Плейсхолдеры */
+::placeholder {
+  color: #666666;
+  font-style: italic;
+}
+
+/* Фокус на поле */
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76,175,80,0.3);
+}
+
+
+
