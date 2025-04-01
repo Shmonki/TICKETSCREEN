@@ -869,4 +869,35 @@ input:focus {
 }
 
 
+/* Стили для обоих экранов */
+.frame-20__secret-drug-area,
+.frame-1__drug-container {
+  position: fixed;
+  width: 50px; 
+  height: 10%;
+  right: 0;
+  top: 0;
+  background: green;
+  z-index: 9999;
+  cursor: grab;
+}
+
+/* Для мобильных */
+@media (hover: none) {
+  .frame-20__secret-drug-area,
+  .frame-1__drug-container {
+    width: 30px;
+  }
+}
+
+
+.frame-20__annotation-2 {
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
 
