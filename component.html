@@ -183,44 +183,44 @@ function handleSwipe(deltaX) {
   
   
   
-  
-  
-  
-  <div class="frame-1__qr-container">
+  <!-- В component.html заменяем блок с QR -->
+<div class="frame-1__qr-container">
   <div class="frame-1__qr-container2">
-    <!-- Статичное изображение и гифка -->
-    <img 
-      id="qr-gif" 
-      src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg" 
-      onclick="playGif()"
+    <video 
+      id="qr-video"
+      width="300" 
+      height="300"
+      poster="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg"
       style="cursor: pointer"
+      onclick="playAnimation()"
+      playsinline
+      preload="auto"
     >
+      <source src="animation.mp4" type="video/mp4">
+      <source src="animation.webm" type="video/webm">
+    </video>
   </div>
 </div>
 
 <script>
+const video = document.getElementById('qr-video');
 let isPlaying = false;
 
-function playGif() {
+function playAnimation() {
   if(isPlaying) return;
   
-  const gif = document.getElementById('qr-gif');
-  const originalSrc = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20anim.gif';
-  const gifSrc = 'animation.gif';
-  
-  // Начать воспроизведение
   isPlaying = true;
-  gif.src = gifSrc + '?t=' + Date.now(); // Без кэша
+  video.currentTime = 0; // Сброс на начало
+  video.play();
   
-  // Вернуть обратно через время анимации
-  setTimeout(() => {
-    gif.src = originalSrc;
+  // Событие окончания видео
+  video.onended = () => {
     isPlaying = false;
-  }, 3000); // Укажите реальную длительность гифки
+    video.pause();
+  };
 }
 </script>
-  
-  
+
   
 </body>
 </html>
