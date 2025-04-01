@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <!-- Добавить в head -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- Предзагрузка видео -->
-<link rel="preload" href="/assets/qr-animation.mp4" as="video">
-  
-  
+<script src="/video-handler.js" defer></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -187,6 +181,33 @@ function handleSwipe(deltaX) {
   }
 }
 </script>
+  
+  
+  
+  
+  
+  <div class="frame-1__qr-container">
+  <div class="frame-1__qr-container2">
+    <!-- Плейсхолдер для видео -->
+    <video 
+      id="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4"
+      class="video-placeholder"
+      width="300"
+      height="300"
+      playsinline
+      preload="auto"
+      muted
+    >
+      <source src="/assets/qr-animation.webm" type="video/webm">
+      <source src="/assets/qr-animation.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+  
+  
+  
+  
+  
   
   
 ?v=1743545548861
