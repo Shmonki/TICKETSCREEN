@@ -500,16 +500,22 @@
   justify-content: center;
 }
 
-
-.component-1,
-.component-1 * {
+.frame-1,
+.frame-1 * {
   box-sizing: border-box;
 }
-.component-1 {
+.frame-1 {
   height: 52.75rem;
   position: relative;
 }
-.component-1__blankscreen {
+.frame-1__blankscreen {
+  width: 24.375rem;
+  height: 52.75rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+.frame-1__blankscreen2 {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -519,322 +525,255 @@
   top: 0%;
   object-fit: cover;
 }
-.component-1__frame-16 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 21.54%;
-  height: 4.38%;
-  position: absolute;
-  right: 34.87%;
-  left: 43.59%;
-  bottom: 72.27%;
-  top: 23.34%;
-}
-.component-1__fevralyacontainer {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1__fevralyacontainer {
+  width: 4rem;
   height: 1.0625rem;
-  position: relative;
-}
-.component-1__frame-15 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 9.49%;
-  height: 3.79%;
   position: absolute;
-  right: 52.56%;
-  left: 37.95%;
-  bottom: 72.63%;
-  top: 23.58%;
+  left: 11.25rem;
+  top: 12.9375rem;
 }
-.component-1___30-container {
+.frame-1__fevralyacontainer2 {
   background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1___30-container {
+  width: 1.0625rem;
   height: 0.75rem;
-  position: relative;
-}
-.component-1__frame-14 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 20.51%;
-  height: 4.98%;
   position: absolute;
-  right: 36.41%;
-  left: 43.08%;
-  bottom: 71.92%;
-  top: 23.1%;
+  left: 9.875rem;
+  top: 13.0625rem;
 }
-.component-1__text {
-  color: #898989;
-  text-align: center;
-  font-family: "RobotoFlex-Regular", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-weight: 400;
-  position: relative;
-}
-.component-1__frame-13 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 9.49%;
-  height: 4.98%;
-  position: absolute;
-  right: 52.56%;
-  left: 37.95%;
-  bottom: 71.92%;
-  top: 23.1%;
-}
-.component-1___30-text {
-  color: #898989;
-  text-align: center;
-  font-family: "RobotoFlex-Regular", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-}
-.component-1__frame-12 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 37.69%;
-  height: 5.09%;
-  position: absolute;
-  right: 53.08%;
-  left: 9.23%;
-  bottom: 74.88%;
-  top: 20.02%;
-}
-.component-1__fevralyacontainer2 {
+.frame-1___30-container2 {
   background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1__text {
+  width: 3.75rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 11.125rem;
+  top: 12.8125rem;
+}
+.frame-1__text2 {
+  color: #898989;
+  text-align: center;
+  font-family: "RobotoFlex-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.frame-1___30-text {
+  width: 1.0625rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 9.875rem;
+  top: 12.8125rem;
+}
+.frame-1___30-text2 {
+  color: #898989;
+  text-align: center;
+  font-family: "RobotoFlex-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.frame-1__fevralyacontainer3 {
+  width: 7.9375rem;
   height: 1.4375rem;
-  position: relative;
-}
-.component-1__frame-11 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 11.54%;
-  height: 4.38%;
   position: absolute;
-  right: 86.67%;
-  left: 1.79%;
-  bottom: 75.24%;
-  top: 20.38%;
+  left: 2.875rem;
+  top: 11.1875rem;
 }
-.component-1___29-container {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1___29-container {
+  width: 1.5625rem;
   height: 1.0625rem;
-  position: relative;
-}
-.component-1__frame-10 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 28.21%;
-  height: 4.98%;
   position: absolute;
-  right: 62.56%;
-  left: 9.23%;
-  bottom: 74.88%;
-  top: 20.14%;
+  left: 1.0625rem;
+  top: 11.375rem;
 }
-.component-1__text2 {
+.frame-1___29-container2 {
+  background: rgba(217, 217, 217, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1__text3 {
+  width: 5.625rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 2.875rem;
+  top: 11.25rem;
+}
+.frame-1__text4 {
   color: #000000;
   text-align: center;
   font-family: "RobotoFlex-Bold", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.375rem;
   font-weight: 700;
-  position: relative;
-}
-.component-1__frame-9 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 60.26%;
-  height: 4.74%;
   position: absolute;
-  right: 37.69%;
-  left: 2.05%;
-  bottom: 79.62%;
-  top: 15.64%;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
 }
-.component-1__station-2-container {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1__station-2-container {
+  width: 13.4375rem;
   height: 1.25rem;
-  position: relative;
-}
-.component-1__frame-8 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 11.54%;
-  height: 4.98%;
   position: absolute;
-  right: 86.67%;
-  left: 1.79%;
-  bottom: 74.88%;
-  top: 20.14%;
+  left: 1.125rem;
+  top: 8.875rem;
 }
-.component-1___29-text {
+.frame-1__station-2-container2 {
+  background: rgba(217, 217, 217, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1___29-text {
+  width: 1.5625rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 1.0625rem;
+  top: 11.25rem;
+}
+.frame-1___29-text2 {
   color: #000000;
   text-align: center;
   font-family: "RobotoFlex-Bold", sans-serif;
   font-size: 1.375rem;
   line-height: 1.375rem;
   font-weight: 700;
-  position: relative;
-}
-.component-1__frame-7 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 38.46%;
-  height: 4.98%;
   position: absolute;
-  right: 59.74%;
-  left: 1.79%;
-  bottom: 79.38%;
-  top: 15.64%;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
 }
-.component-1__station-2-text {
+.frame-1__station-2-text {
+  width: 8.125rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 1.0625rem;
+  top: 8.875rem;
+}
+.frame-1__station-2-text2 {
   color: #000000;
   text-align: center;
   font-family: "RobotoFlex-Regular", sans-serif;
   font-size: 1.4375rem;
   line-height: 1.375rem;
   font-weight: 400;
-  position: relative;
-}
-.component-1__frame-6 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 60%;
-  height: 4.38%;
   position: absolute;
-  right: 38.21%;
-  left: 1.79%;
-  bottom: 82.7%;
-  top: 12.91%;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
 }
-.component-1__station-1-container {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1__station-1-container {
+  width: 13.375rem;
   height: 1.0625rem;
-  position: relative;
-}
-.component-1__frame-5 {
-  padding: 0.625rem 4.1875rem 0.625rem 0.625rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 4.98%;
   position: absolute;
-  right: 18.46%;
-  left: 1.54%;
-  bottom: 82.35%;
-  top: 12.68%;
+  left: 1.0625rem;
+  top: 7.4375rem;
 }
-.component-1__text3 {
+.frame-1__station-1-container2 {
+  background: rgba(217, 217, 217, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1__text5 {
+  width: 18.5rem;
+  height: 1.375rem;
+  position: absolute;
+  left: 0rem;
+  top: 7.25rem;
+}
+.frame-1__text6 {
   color: #000000;
   text-align: center;
   font-family: "RobotoFlex-Regular", sans-serif;
   font-size: 1.5rem;
   line-height: 1.375rem;
   font-weight: 400;
-  position: relative;
-  width: 17rem;
-}
-.component-1__frame-4 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 12.05%;
-  height: 4.5%;
   position: absolute;
-  right: 87.44%;
-  left: 0.51%;
-  bottom: 11.49%;
-  top: 84%;
+  right: 6.42%;
+  left: -6.42%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
 }
-.component-1__price-container {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1__price-container {
+  width: 1.6875rem;
   height: 1.125rem;
-  position: relative;
-}
-.component-1__frame-3 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
-  width: 11.28%;
-  height: 5.21%;
   position: absolute;
-  right: 88.21%;
-  left: 0.51%;
-  bottom: 11.14%;
-  top: 83.65%;
+  left: 0.75rem;
+  top: 44.9375rem;
 }
-.component-1___48-text {
+.frame-1__price-container2 {
+  background: rgba(217, 217, 217, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1___48-text {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0.75rem;
+  top: 44.75rem;
+}
+.frame-1___48-text2 {
   color: #000000;
   text-align: center;
   font-family: "Roboto-SemiBold", sans-serif;
@@ -842,56 +781,49 @@
   line-height: 1.5rem;
   letter-spacing: 0.03125rem;
   font-weight: 600;
-  position: relative;
-  align-self: stretch;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.component-1__frame-2 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 96.41%;
-  height: 18.96%;
-  position: absolute;
-  right: 1.54%;
-  left: 2.05%;
-  bottom: 52.96%;
-  top: 28.08%;
-}
-.component-1__qr-container {
-  background: rgba(217, 217, 217, 0);
-  align-self: stretch;
-  flex-shrink: 0;
+.frame-1__qr-container {
+  width: 22.25rem;
   height: 8.75rem;
-  position: relative;
-}
-.component-1__frame-1 {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 23.85%;
-  height: 9%;
   position: absolute;
-  right: 37.69%;
-  left: 38.46%;
-  bottom: 2.01%;
-  top: 88.98%;
+  left: 1.125rem;
+  top: 15.4375rem;
 }
-.component-1__drug-container {
+.frame-1__qr-container2 {
+  background: rgba(217, 217, 217, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.frame-1__drug-container {
+  width: 4.5625rem;
+  height: 3.5rem;
+  position: absolute;
+  left: 10rem;
+  top: 47.5625rem;
+}
+.frame-1__drug-container2 {
   background: rgba(217, 217, 217, 0);
   border-radius: 0.625rem;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 3.5rem;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
 }
-
-
