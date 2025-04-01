@@ -4,6 +4,9 @@
   
   <!-- Добавить в head -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Предзагрузка видео -->
+<link rel="preload" href="/assets/qr-animation.mp4" as="video">
+  
   
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -187,60 +190,30 @@ function handleSwipe(deltaX) {
   
   
   
+  <video ...>
+  <source src="/assets/qr-animation.mp4" type="video/mp4">
+  <!-- Если видео не поддерживается -->
+  <img src="" style="width: 100%">
+</video>
+  
   
   <div class="frame-1__qr-container">
   <div class="frame-1__qr-container2">
-    <!-- Статичное изображение и гифка -->
-    <img 
-      id="qr-gif" 
-      src="ttps://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg" 
-      alt="QR код"
-      onclick="playGif()"
-      style="cursor: pointer"
-    >
-  </div>
-</div>
-
-  
-  
-  <!-- В component.html заменяем блок с QR -->
-<div class="frame-1__qr-container">
-  <div class="frame-1__qr-container2">
-    <video 
-      id="qr-video"
-      width="300" 
+    <!-- Видео с превью и контролем воспроизведения -->
+    <video
+      id=""
+      width="300"
       height="300"
-      poster="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/IMG_2750%20(2).webm"
-      style="cursor: pointer"
-      onclick="playAnimation()"
-      playsinline
+      poster="https://cdn.glitch.global/e0-b393-aa2f0de7a5be/qr%20static.jpg"
+      style="cursor: pointer; background: #f0f0f0;"
       preload="auto"
+      playsinline
+      muted
     >
-      <source src="animation.mp4" type="video/mp4">
-      <source src="animation.webm" type="video/webm">
+      <source src="/assets/qr-animation.mp4" type="video/mp4">
     </video>
   </div>
 </div>
-
-<script>
-const video = document.getElementById('qr-video');
-let isPlaying = false;
-
-function playAnimation() {
-  if(isPlaying) return;
-  
-  isPlaying = true;
-  video.currentTime = 0; // Сброс на начало
-  video.play();
-  
-  // Событие окончания видео
-  video.onended = () => {
-    isPlaying = false;
-    video.pause();
-  };
-}
-</script>
-
   
 </body>
-</html>
+</html>https:https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/IMG_2750%20(2).MP4dc14-9dc5-42f2-b393-aa2f0de7a5be/IMG_2750%20(2).MP4?v=1743545548861
