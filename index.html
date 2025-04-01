@@ -136,10 +136,10 @@
   <!-- Поле "Откуда" -->
   <div class="frame-20__frame-5">
     <input 
-      type="number" 
+      type="text" 
       id="input-otkuda" 
       class="frame-20__input-area-otkuda"
-      placeholder="ОТКУДА (ЧИСЛО)"
+      placeholder="ОТКУДА"
     >
   </div>
 
@@ -149,7 +149,7 @@
       type="number" 
       id="input-price" 
       class="frame-20__input-area-price"
-      placeholder="ЦЕНА (ЧИСЛО)"
+      placeholder="ЦЕНА"
     >
   </div>
 
@@ -187,6 +187,14 @@ function checkForm() {
   window.location.href = 'component.html';
 }
 </script>
+  
+  <!-- Для index.html -->
+<div class="frame-20__secret-drug-area" 
+     ontouchstart="handleTouchStart(event)"
+     ontouchend="handleTouchEnd(event)"
+     onmousedown="handleMouseStart(event)"
+     onmouseup="handleMouseEnd(event)">
+</div>
   
   
   
