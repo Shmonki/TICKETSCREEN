@@ -901,3 +901,14 @@ input:focus {
   100% { opacity: 0.6; }
 }
 
+
+#qr-gif {
+  transition: opacity 0.3s;
+  width: 100%; /* Подстройте под ваш макет */
+  height: auto;
+}
+
+#qr-gif:active {
+  opacity: 0.9; /* Визуальная обратная связь */
+}
+

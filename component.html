@@ -183,5 +183,45 @@ function handleSwipe(deltaX) {
   
   
   
+  
+  
+  
+  <div class="frame-1__qr-container">
+  <div class="frame-1__qr-container2">
+    <!-- Статичное изображение и гифка -->
+    <img 
+      id="qr-gif" 
+      src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg" 
+      alt="QR код"
+      onclick="playGif()"
+      style="cursor: pointer"
+    >
+  </div>
+</div>
+
+<script>
+let isPlaying = false;
+
+function playGif() {
+  if(isPlaying) return;
+  
+  const gif = document.getElementById('qr-gif');
+  const originalSrc = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr%20static.jpg';
+  const gifSrc = 'animation.gif';
+  
+  // Начать воспроизведение
+  isPlaying = true;
+  gif.src = gifSrc + '?t=' + Date.now(); // Без кэша
+  
+  // Вернуть обратно через время анимации
+  setTimeout(() => {
+    gif.src = originalSrc;
+    isPlaying = false;
+  }, 3000); // Укажите реальную длительность гифки
+}
+</script>
+  
+  
+  
 </body>
 </html>
