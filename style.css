@@ -500,6 +500,20 @@
   justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .frame-1,
 .frame-1 * {
   box-sizing: border-box;
@@ -509,6 +523,7 @@
   position: relative;
 }
 .frame-1__blankscreen {
+  background-image: url('https://cdn.glitch.global/ticketscreenitsapain/blankscreen1.pngv=1743519789317');
   width: 24.375rem;
   height: 52.75rem;
   position: absolute;
