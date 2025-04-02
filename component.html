@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="/video-handler.js" defer></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,28 +183,46 @@ function handleSwipe(deltaX) {
   
   
   
+
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- ... остальные метатеги ... -->
   
-  <!-- Проверь регистр букв! -->
-<source src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm" type="video/webm">
-  
-  
-  <div class="frame-1__qr-container">
-  <div class="frame-1__qr-container2">
-    <!-- Плейсхолдер для видео -->
-    <video 
-      id="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4"
-      class="video-placeholder"
-      width="300"
-      height="300"
-      playsinline
-      preload="auto"
-      muted
-    >
-      <source src="/https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm/webm">
-      <source src="/https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4/mp4">
-    </video>
+  <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
+  <div class="frame-1">
+    <!-- ... другие элементы ... -->
+    
+    <!-- КОНТЕЙНЕР ДЛЯ ВИДЕО (ЗАМЕНИТЕ ЭТОТ БЛОК) -->
+    <div class="qr-container">
+      <video 
+        id="qr-video"
+        class="video-preview"
+        width="300" 
+        height="300"
+        playsinline
+        muted
+      >
+        <!-- ВНИМАНИЕ: Путь должен совпадать с названием файла в Assets -->
+        <source src="/assets/qr-animation.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+
+    <!-- ... остальные элементы ... -->
   </div>
-</div>
+
+  <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
+  <script src="/script.js"></script>
+</body>
+</html>
+  
+  
+  
   
   
   
