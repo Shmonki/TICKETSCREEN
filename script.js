@@ -1,9 +1,7 @@
 // Ждём полной загрузки страницы
 window.addEventListener('DOMContentLoaded', () => {
   // ПОЛУЧАЕМ ЭЛЕМЕНТ ВИДЕО (УБЕДИТЕСЬ ЧТО ID СОВПАДАЕТ)
-  const video = document.getElementById('
-
-qr-animation.webm');
+  const video = document.getElementById('https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm');
   let isPlaying = false;
 
   // ПОКАЗЫВАЕМ ПЕРВЫЙ КАДР КАК ПРЕВЬЮ
