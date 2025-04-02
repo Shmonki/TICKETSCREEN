@@ -894,7 +894,7 @@ input:focus {
 
 /* СТИЛИ ДЛЯ ВИДЕО-ПЛЕЙСХОЛДЕРА */
 .video-preview {
-  background: #f0f0f0;
+  background: ffffff;
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s;
