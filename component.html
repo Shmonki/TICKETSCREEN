@@ -183,32 +183,40 @@ function handleSwipe(deltaX) {
   
   
   
-
-  <!DOCTYPE html>
+  <video>
+  <source src="/assets/qr-animation.webm" type="video/webm">
+  <source src="/assets/qr-animation.mp4" type="video/mp4">
+</video>
+  
+  
+  
+  
+  
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <!-- ... остальные метатеги ... -->
   
   <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
-  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
-  <div class="qr-animation.webm">
+  <div class="frame-1">
     <!-- ... другие элементы ... -->
     
     <!-- КОНТЕЙНЕР ДЛЯ ВИДЕО (ЗАМЕНИТЕ ЭТОТ БЛОК) -->
     <div class="qr-container">
       <video 
-        id="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm"
+        id="qr-video"
         class="video-preview"
-        width="355" 
-        height="360"
+        width="300" 
+        height="300"
         playsinline
         muted
       >
         <!-- ВНИМАНИЕ: Путь должен совпадать с названием файла в Assets -->
         <source src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
       </video>
     </div>
 
@@ -216,13 +224,11 @@ function handleSwipe(deltaX) {
   </div>
 
   <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
-  <script src="/script.js"> </script>
-  
+  <script src="/script.js"></script>
   
   
 </body>
 </html>
-  
   
   
   
