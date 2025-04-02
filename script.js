@@ -1,42 +1,38 @@
-// Ждём полной загрузки страницы
-window.addEventListener('DOMContentLoaded', () => {
-  // ПОЛУЧАЕМ ЭЛЕМЕНТ ВИДЕО (УБЕДИТЕСЬ ЧТО ID СОВПАДАЕТ)
+// Ожидаем полной загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+  // Получаем элемент видео
   const video = document.getElementById('qr-animation.webm');
-  let isPlaying = false;
+  
+  // Если элемент не найден
+ // if (!video) {
+   // console.error('Элемент #qr-video не найден!');
+  //  return;
+  }
 
-  // ПОКАЗЫВАЕМ ПЕРВЫЙ КАДР КАК ПРЕВЬЮ
+ // let isPlaying = false;
+
+  // Показываем первый кадр как превью
   video.addEventListener('loadeddata', () => {
     video.pause();
     video.currentTime = 0;
   });
 
-  // ОБРАБОТЧИК КЛИКА (ТАПА НА МОБИЛЬНЫХ)
+  // Обработчик клика
   video.addEventListener('click', async () => {
-    // ЗАЩИТА ОТ ПОВТОРНЫХ НАЖАТИЙ
-    if(isPlaying) return;
+    if (isPlaying) return;
     isPlaying = true;
 
     try {
-      // ЗАПУСК ВОСПРОИЗВЕДЕНИЯ
       await video.play();
-      
-      // ПО ОКОНЧАНИИ ВИДЕО
-      video.addEventListener('ended', () => {
-        // ВОЗВРАЩАЕМ ПРЕВЬЮ
-        video.currentTime = 0;
-        // ЗАДЕРЖКА 1 СЕКУНДА МЕЖДУ КЛИКАМИ
-        setTimeout(() => {
-          isPlaying = false;
-        }, 1000);
-      }, { once: true });
-
-    } catch(error) {
-      // ЕСЛИ ВОЗНИКЛА ОШИБКА
-      console.error('Ошибка воспроизведения:', error);
+    } catch (err) {
+      console.error('Ошибка воспроизведения:', err);
       isPlaying = false;
     }
-  });
 
-  // ПРЕДЗАГРУЗКА ВИДЕО
-  video.load();
+    // Сброс после завершения видео
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      isPlaying = false;
+    }, { once: true });
+  });
 });
