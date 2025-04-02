@@ -182,13 +182,7 @@ function handleSwipe(deltaX) {
 </script>
   
   
-  
-  <video>
-  <source src="/assets/qr-animation.webm" type="video/webm">
-  <source src="/assets/qr-animation.mp4" type="video/mp4">
-</video>
-  
-  
+
   
   
   
@@ -201,7 +195,7 @@ function handleSwipe(deltaX) {
 </head>
 <body>
   <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
-  <div class="frame-1">
+  <div class="frame-1__qr-container">
     <!-- ... другие элементы ... -->
     
     <!-- КОНТЕЙНЕР ДЛЯ ВИДЕО (ЗАМЕНИТЕ ЭТОТ БЛОК) -->
@@ -209,8 +203,8 @@ function handleSwipe(deltaX) {
       <video 
         id="qr-video"
         class="video-preview"
-        width="300" 
-        height="300"
+        width="350" 
+        height="128"
         playsinline
         muted
       >
