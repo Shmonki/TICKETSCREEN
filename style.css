@@ -891,9 +891,6 @@ input:focus {
 
 
 
-
-
-
 /* СТИЛИ ДЛЯ ВИДЕО-ПЛЕЙСХОЛДЕРА */
 .video-preview {
   background: #f0f0f0;
@@ -902,6 +899,11 @@ input:focus {
   transition: transform 0.2s, opacity 0.2s;
 }
 
+/* ЭФФЕКТ НАЖАТИЯ */
+.video-preview:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
 
 /* СКРЫВАЕМ СТАНДАРТНЫЕ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ */
 .video-preview::-webkit-media-controls {
