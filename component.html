@@ -184,50 +184,18 @@ function handleSwipe(deltaX) {
 </script>
   
   
-  
-  <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- 🔧 Подключите ваши стили -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* 🔧 Ваш контейнер из Figma */
-        .frame-1__qr-container {
-            width: 365px;
-            height: 150px;
-            position: relative;
-            background: #000;
-            /* Добавьте остальные стили из вашего макета */
-        }
-        
-        #qr-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .video-preview {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            transition: opacity 0.3s;
-        }
-    </style>
+ 
 </head>
 <body>
-    <!-- 🔧 Ваш контейнер из Figma -->
-    <div class="frame-1__qr-container" id="videoContainer">
-        <video id="qr-video" playsinline muted></video>
-        <img id="previewImage" class="video-preview" 
-             alt="Превью QR-кода"
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="> <!-- 🔧 Прозрачный плейсхолдер -->
-    </div>
-
+ 
     <script>
         // 🔧 Абсолютные ссылки на ассеты
         const VIDEO_WEBM_URL = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm';
@@ -304,10 +272,6 @@ function handleSwipe(deltaX) {
     </script>
 </body>
 </html>
-  
-  
-  
-
   
   </body>
   </html>
