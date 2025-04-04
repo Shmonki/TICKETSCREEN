@@ -896,26 +896,3 @@ input:focus {
 }
 
 
-
-/* СТИЛИ ДЛЯ ВИДЕО-ПЛЕЙСХОЛДЕРА */
-.video-preview {
-  background: ffffff;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-
-/* СКРЫВАЕМ СТАНДАРТНЫЕ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ */
-.video-preview::-webkit-media-controls {
-  display: none !important;
-}
-
-
-#qr-video {
-  cursor: pointer;
-  background: #000000;
-}
-
-
-
