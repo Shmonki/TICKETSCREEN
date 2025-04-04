@@ -1,78 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Ждём полной загрузки страницы
+window.addEventListener('DOMContentLoaded', () => {
+  // ПОЛУЧАЕМ ЭЛЕМЕНТ ВИДЕО (УБЕДИТЕСЬ ЧТО ID СОВПАДАЕТ)
   const video = document.getElementById('qr-video');
-  if (!video) return;
-
   let isPlaying = false;
-  let abortController = null;
 
-  // Жесткий сброс состояния видео
-  const hardResetVideo = () => {
+  // ПОКАЗЫВАЕМ ПЕРВЫЙ КАДР КАК ПРЕВЬЮ
+  video.addEventListener('loadeddata', () => {
     video.pause();
     video.currentTime = 0;
-    video.removeAttribute('src');
-    video.load();
-    if (abortController) abortController.abort();
-    abortController = new AbortController();
-  };
+  });
 
-  // Восстановление источника
-  const restoreSource = () => {
-    video.innerHTML = '';
-    const webmSource = document.createElement('source');
-    webmSource.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm';
-    webmSource.type = 'video/webm';
-    video.appendChild(webmSource);
-    
-    const mp4Source = document.createElement('source');
-    mp4Source.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4';
-    mp4Source.type = 'video/mp4';
-    video.appendChild(mp4Source);
-    
-    video.load();
-  };
-
+  // ОБРАБОТЧИК КЛИКА (ТАПА НА МОБИЛЬНЫХ)
   video.addEventListener('click', async () => {
-    if (isPlaying) {
-      hardResetVideo();
-      await new Promise(r => setTimeout(r, 300));
-      restoreSource();
-      return;
-    }
+    // ЗАЩИТА ОТ ПОВТОРНЫХ НАЖАТИЙ
+    if(isPlaying) return;
+    isPlaying = true;
 
     try {
-      isPlaying = true;
-      const signal = abortController.signal;
+      // ЗАПУСК ВОСПРОИЗВЕДЕНИЯ
+      await video.play();
       
-      await Promise.race([
-        video.play(),
-        new Promise((_, reject) => {
-          if (signal.aborted) reject(new DOMException('Aborted', 'AbortError'));
-          signal.addEventListener('abort', () => 
-            reject(new DOMException('Aborted', 'AbortError')));
-        })
-      ]);
-
+      // ПО ОКОНЧАНИИ ВИДЕО
       video.addEventListener('ended', () => {
-        hardResetVideo();
-        isPlaying = false;
-      }, { once: true, signal: abortController.signal });
+        // ВОЗВРАЩАЕМ ПРЕВЬЮ
+        video.currentTime = 0;
+        // ЗАДЕРЖКА 1 СЕКУНДА МЕЖДУ КЛИКАМИ
+        setTimeout(() => {
+          isPlaying = false;
+        }, 1000);
+      }, { once: true });
 
-    } catch (err) {
-      if (err.name !== 'AbortError') {
-        console.error('Playback failed:', err);
-        hardResetVideo();
-        restoreSource();
-      }
+    } catch(error) {
+      // ЕСЛИ ВОЗНИКЛА ОШИБКА
+      console.error('Ошибка воспроизведения:', error);
       isPlaying = false;
     }
   });
 
-  // Периодический сброс каждые 5 кликов
-  let clickCounter = 0;
-  video.addEventListener('click', () => {
-    if (++clickCounter % 5 === 0) {
-      hardResetVideo();
-      restoreSource();
-    }
-  });
+  // ПРЕДЗАГРУЗКА ВИДЕО
+  video.load();
 });
