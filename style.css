@@ -507,9 +507,12 @@
 .frame-1 * {
   box-sizing: border-box;
 }
+
+
 .frame-1 {
   height: 844px;
   position: relative;
+   z-index: 1;
 }
 .frame-1__blankscreen {
   width: 390px;
@@ -518,6 +521,7 @@
   left: 0px;
   top: 0px;
   object-fit: cover;
+   z-index: 0;
 }
 .frame-1__text {
   width: 60px;
@@ -635,6 +639,9 @@
   position: absolute;
   left: 16px;
   top: 117px;
+    z-index: 2; /* Поднимаем выше фона */
+  transform: translateZ(0); /* Фикс для аппаратного ускорения */
+
 }
 .frame-1__text6 {
   color: #000000;
