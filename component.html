@@ -217,13 +217,13 @@ function handleSwipe(deltaX) {
     </style>
 </head>
 <body>
-    <div id="videoContainer">
-        <video id="videoElement" playsinline muted></video>
+    <div id="frame-1__qr-container">
+        <video id="qr-video" playsinline muted></video>
         <img id="previewImage" class="preview" alt="Превью">
     </div>
 
     <script>
-        const video = document.getElementById('videoElement');
+        const video = document.getElementById('qr-video');
         const preview = document.getElementById('previewImage');
         let isPlaying = false;
         let videoSource = null;
@@ -319,35 +319,6 @@ function handleSwipe(deltaX) {
   
   
 
-  
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
-<body>
-  <div class="frame-1__qr-container">
-    <video 
-      id="qr-video"
-      width="365" 
-      height="150"
-      playsinline
-      muted
-      preload="none"
-    >
-      <source src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm" type="video/webm">
-      <source src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <script src="/script.js"></script>
-</body>
-</html>
-  
-  
-  
   
   </body>
   </html>
