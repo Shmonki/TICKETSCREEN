@@ -190,6 +190,8 @@ function checkForm() {
   
   
   
+  
+  
   <!DOCTYPE html>
 <html>
 <head>
@@ -242,9 +244,9 @@ function checkForm() {
 
         async function cacheVideo() {
             return new Promise((resolve, reject) => {
-                const video = document.createElement('video');
+                const video = document.createElement('qr-video');
                 video.preload = 'auto';
-                video.src = 'video.mp4'; // Основной источник
+                video.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm'; // Основной источник
                 
                 video.onloadeddata = () => {
                     video.remove();
