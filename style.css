@@ -211,76 +211,6 @@
 
 
 
-/* Стили для полей ввода */
-.frame-20__input-area-kuda,
-.frame-20__input-area-otkuda,
-.frame-20__input-area-price {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #cccccc;
-  border-radius: 8px;
-}
-
-/* Плейсхолдеры */
-::placeholder {
-  color: #666666;
-  font-style: italic;
-}
-
-/* Фокус на поле */
-input:focus {
-  outline: none;
-  border-color: #4caf50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
-}
-
-/* Стили для обоих экранов */
-.frame-20__secret-drug-area,
-.frame-1__drug-container {
-  position: fixed;
-  width: 50px;
-  height: 10%;
-  right: 0;
-  top: 0;
-  background: green;
-  z-index: 9999;
-  cursor: grab;
-}
-
-/* Для мобильных */
-@media (hover: none) {
-  .frame-20__secret-drug-area,
-  .frame-1__drug-container {
-    width: 50px;
-  }
-}
-
-.frame-20__annotation-2 {
-  animation: pulse 4s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
-
-..body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-
-
 
 
 
@@ -311,6 +241,13 @@ input:focus {
   left: 166px;
   top: 455px;
   box-shadow: 0px 4px 2.3px 0px rgba(0, 0, 0, 0.25);
+    background: #8e8891;
+  border-radius: 22px;
+  padding: 12px 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 .frame-2__div {
   color: #ffffff;
@@ -687,6 +624,7 @@ input:focus {
   overflow: visible;
 }
 .frame-2__instructionannotationcomponent {
+   animation: pulse 4s infinite;
   width: 278px;
   height: 32px;
   position: absolute;
@@ -737,4 +675,73 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* Стили для полей ввода */
+.frame-20__input-area-kuda,
+.frame-20__input-area-otkuda,
+.frame-20__input-area-price {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+}
+
+/* Плейсхолдеры */
+::placeholder {
+  color: #666666;
+  font-style: italic;
+}
+
+/* Фокус на поле */
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Стили для обоих экранов */
+.frame-20__secret-drug-area,
+.frame-1__drug-container {
+  position: fixed;
+  width: 50px;
+  height: 10%;
+  right: 0;
+  top: 0;
+  background: green;
+  z-index: 9999;
+  cursor: grab;
+}
+
+/* Для мобильных */
+@media (hover: none) {
+  .frame-20__secret-drug-area,
+  .frame-1__drug-container {
+    width: 50px;
+  }
+}
+
+.frame-20__annotation-2 {
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
+..body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
