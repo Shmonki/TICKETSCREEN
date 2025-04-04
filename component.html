@@ -1,101 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="vars.css">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
 
-  
-  
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="frame-1">
-    <div class="frame-1__blankscreen">
-      <img class="frame-1__blankscreen2" src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/blankscreen1.png" />
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="frame-1">
+      <img
+        class="frame-1__blankscreen"
+        src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/blankscreen1.png"
+      />
+      <div class="frame-1__text">
+        <div class="frame-1__text2"></div>
+      </div>
+      <div class="frame-1___30-text">
+        <div class="frame-1___30-text2">30</div>
+      </div>
+      <div class="frame-1__text3">
+        <div class="frame-1__text4"></div>
+      </div>
+      <div class="frame-1___29-text">
+        <div class="frame-1___29-text2">29</div>
+      </div>
+      <div class="frame-1__station-2-text">
+        <div class="frame-1__station-2-text2">- </div>
+      </div>
+      <div class="frame-1__text5">
+        <div class="frame-1__text6"></div>
+      </div>
+      <div class="frame-1__price-container">
+        <div class="frame-1__price-container2"></div>
+      </div>
+      <div class="frame-1___48-text">
+        <div class="frame-1___48-text2"></div>
+      </div>
+      <div class="frame-1__qr-container">
+        <div class="frame-1__qr-container2"></div>
+      </div>
+      <div class="frame-1__drug-container">
+        <div class="frame-1__drug-container2"></div>
+      </div>
     </div>
-    <div class="frame-1__fevralyacontainer">
-      <div class="frame-1__fevralyacontainer2"></div>
-    </div>
-    <div class="frame-1___30-container">
-      <div class="frame-1___30-container2"></div>
-    </div>
-    <div class="frame-1__text">
-      <div class="frame-1__text2">февраля</div>
-    </div>
-    <div class="frame-1___30-text">
-      <div class="frame-1___30-text2">30</div>
-    </div>
-    <div class="frame-1__fevralyacontainer3">
-      <div class="frame-1__fevralyacontainer2"></div>
-    </div>
-    <div class="frame-1___29-container">
-      <div class="frame-1___29-container2"></div>
-    </div>
-    <div class="frame-1__text3">
-      <div class="frame-1__text4">февраля</div>
-    </div>
-    <div class="frame-1__station-2-container">
-      <div class="frame-1__station-2-container2"></div>
-    </div>
-    <div class="frame-1___29-text">
-      <div class="frame-1___29-text2">29</div>
-    </div>
-    <div class="frame-1__station-2-text">
-      <div class="frame-1__station-2-text2">- Парголово</div>
-    </div>
-    <div class="frame-1__station-1-container">
-      <div class="frame-1__station-1-container2"></div>
-    </div>
-    <div class="frame-1__text5">
-      <div class="frame-1__text6">Финляндский вокзал</div>
-    </div>
-    <div class="frame-1__price-container">
-      <div class="frame-1__price-container2"></div>
-    </div>
-    <div class="frame-1___48-text">
-      <div class="frame-1___48-text2">48</div>
-    </div>
-    <div class="frame-1__qr-container">
-      <div class="frame-1__qr-container2"></div>
-    </div>
-    <div class="frame-1__drug-container">
-      <div class="frame-1__drug-container2"></div>
-    </div>
-  </div>
-  
-  
-  
-  <!-- Внутри тега body обновим блоки вывода -->
+  </body>
+</html>
+
+
+
+
+<!-- Внутри тега body обновим блоки вывода -->
 <div class="frame-1">
   <!-- ... остальные элементы ... -->
 
@@ -114,76 +100,83 @@
 </div>
 
 <script>
-// При загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  const data = JSON.parse(localStorage.getItem('formData'));
-  
-  if(data) {
-    document.getElementById('output-kuda').textContent = data.kuda.toUpperCase();
-    document.getElementById('output-otkuda').textContent = `- ${data.otkuda}`;
-    document.getElementById('output-price').textContent = data.price;
-  }
-});
+  // При загрузке страницы
+  document.addEventListener("DOMContentLoaded", () => {
+    const data = JSON.parse(localStorage.getItem("formData"));
+
+    if (data) {
+      document.getElementById("output-kuda").textContent =
+        data.kuda.toUpperCase();
+      document.getElementById("output-otkuda").textContent = `- ${data.otkuda}`;
+      document.getElementById("output-price").textContent = data.price;
+    }
+  });
 </script>
-  
-  
-  <!-- Для component.html -->
-<div class="frame-1__drug-container"
-     ontouchstart="handleTouchStart(event)"
-     ontouchend="handleTouchEnd(event)"
-     onmousedown="handleMouseStart(event)"
-     onmouseup="handleMouseEnd(event)">
+
+
+
+
+
+
+<!-- Для component.html -->
+<div
+  class="frame-1__drug-container"
+  ontouchstart="handleTouchStart(event)"
+  ontouchend="handleTouchEnd(event)"
+  onmousedown="handleMouseStart(event)"
+  onmouseup="handleMouseEnd(event)"
+>
   <div class="frame-1__drug-container2"></div>
 </div>
-  
-  
-  <script>
-let startX = 0;
-let isDragging = false;
-const MIN_SWIPE_DISTANCE = 100; // Минимальная дистанция свайпа
 
-// Для тач-устройств
-function handleTouchStart(e) {
-  startX = e.touches[0].clientX;
-  isDragging = true;
-}
+<script>
+  let startX = 0;
+  let isDragging = false;
+  const MIN_SWIPE_DISTANCE = 100; // Минимальная дистанция свайпа
 
-function handleTouchEnd(e) {
-  if (!isDragging) return;
-  const endX = e.changedTouches[0].clientX;
-  handleSwipe(endX - startX);
-  isDragging = false;
-}
-
-// Для десктопов
-function handleMouseStart(e) {
-  startX = e.clientX;
-  isDragging = true;
-  document.addEventListener('mousemove', handleMouseMove);
-  document.addEventListener('mouseup', handleMouseEnd);
-}
-
-function handleMouseMove(e) {
-  if (!isDragging) return;
-  const currentX = e.clientX;
-  handleSwipe(currentX - startX);
-}
-
-function handleMouseEnd(e) {
-  isDragging = false;
-  document.removeEventListener('mousemove', handleMouseMove);
-  document.removeEventListener('mouseup', handleMouseEnd);
-}
-
-// Общая проверка жеста
-function handleSwipe(deltaX) {
-  if (deltaX < -MIN_SWIPE_DISTANCE) { // Свайп влево
-    window.location.href = 'index.html'; 
+  // Для тач-устройств
+  function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+    isDragging = true;
   }
-}
+
+  function handleTouchEnd(e) {
+    if (!isDragging) return;
+    const endX = e.changedTouches[0].clientX;
+    handleSwipe(endX - startX);
+    isDragging = false;
+  }
+
+  // Для десктопов
+  function handleMouseStart(e) {
+    startX = e.clientX;
+    isDragging = true;
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseEnd);
+  }
+
+  function handleMouseMove(e) {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    handleSwipe(currentX - startX);
+  }
+
+  function handleMouseEnd(e) {
+    isDragging = false;
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseEnd);
+  }
+
+  // Общая проверка жеста
+  function handleSwipe(deltaX) {
+    if (deltaX < -MIN_SWIPE_DISTANCE) {
+      // Свайп влево
+      window.location.href = "index.html";
+    }
+  }
 </script>
-  
-   <!-- Сегодняшняя дата -->
+
+<!-- Сегодняшняя дата -->
 <div class="frame-1__fevralyacontainer2">
   <div class="frame-1___29-container">
     <div class="frame-1___29-text date-today">29</div>
@@ -196,25 +189,30 @@ function handleSwipe(deltaX) {
     <div class="frame-1___30-text date-tomorrow">30</div>
   </div>
 </div>
-  
-  
-  
-  
-  
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     // Массив названий месяцев
     const months = [
-        'января', 'февраля', 'марта', 'апреля',
-        'мая', 'июня', 'июля', 'августа',
-        'сентября', 'октября', 'ноября', 'декабря'
+      "января",
+      "февраля",
+      "марта",
+      "апреля",
+      "мая",
+      "июня",
+      "июля",
+      "августа",
+      "сентября",
+      "октября",
+      "ноября",
+      "декабря",
     ];
 
     // Функция форматирования даты
     function formatDate(date) {
-        const day = date.getDate();
-        const month = months[date.getMonth()];
-        return `${day} ${month}`;
+      const day = date.getDate();
+      const month = months[date.getMonth()];
+      return `${day} ${month}`;
     }
 
     // Сегодняшняя дата
@@ -225,32 +223,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Обновляем элементы
     function updateDateElements() {
-        // Сегодняшняя дата
-        document.querySelectorAll('.frame-1___29-text').forEach(el => {
-            el.textContent = formatDate(today);
-        });
-        
-        // Завтрашняя дата
-        document.querySelectorAll('.frame-1___30-text').forEach(el => {
-            el.textContent = formatDate(tomorrow);
-        });
+      // Сегодняшняя дата
+      document.querySelectorAll(".frame-1___29-text").forEach((el) => {
+        el.textContent = formatDate(today);
+      });
+
+      // Завтрашняя дата
+      document.querySelectorAll(".frame-1___30-text").forEach((el) => {
+        el.textContent = formatDate(tomorrow);
+      });
     }
 
     // Инициализация
     updateDateElements();
-});
+  });
 </script>
-  
-  
-
-  
-  
-  </body>
-  </html>
-  
-  
-  
-  
-  
-  
-  
