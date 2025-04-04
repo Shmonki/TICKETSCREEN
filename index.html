@@ -158,47 +158,32 @@
 </head>
 <body>
     <div class="frame-2">
-        <!-- Основные элементы интерфейса -->
-        <div class="frame-2__buttoncomponent" onclick="checkForm()">
-            <div class="frame-2__buttontext">стартуем!</div>
-        </div>
-
-        <!-- Поля ввода -->
+        <!-- Обновлённые поля ввода -->
         <div class="frame-2__areakudacomponent">
             <input type="text" 
-                   id="input-kuda" 
+                   id="input-areakuda" 
                    class="frame-2__areakuda" 
                    placeholder="КУДА">
         </div>
 
         <div class="frame-2__areaotkudacomponent">
             <input type="text" 
-                   id="input-otkuda" 
+                   id="input-areaotkuda" 
                    class="frame-2__areaotkuda" 
                    placeholder="ОТКУДА">
         </div>
 
         <div class="frame-2__areatsenacomponent">
             <input type="number" 
-                   id="input-price" 
+                   id="input-areatsena" 
                    class="frame-2__areatsena" 
                    placeholder="ЦЕНА">
         </div>
 
-        <!-- Остальные компоненты -->
-        <div class="frame-2__switch-1-component">
-            <div class="frame-2__knob"></div>
+        <!-- Кнопка с новым классом -->
+        <div class="frame-2__buttoncomponent" onclick="checkForm()">
+            <div class="frame-2__buttontext">СТАРТУЕМ!</div>
         </div>
-
-        <svg class="frame-2__barscomponent" 
-             width="390" 
-             height="844" 
-             viewBox="0 0 390 844" 
-             fill="none" 
-             xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 761H390V844H0V761Z" fill="#222222"/>
-            <path d="M0 0H390V91H0V0Z" fill="#222222"/>
-        </svg>
 
         <!-- Блок ошибок -->
         <div id="error-message" 
@@ -208,10 +193,11 @@
 
     <script>
         function checkForm() {
+            // Используем новые ID
             const inputs = {
-                kuda: document.getElementById('input-kuda'),
-                otkuda: document.getElementById('input-otkuda'),
-                price: document.getElementById('input-price')
+                kuda: document.getElementById('input-areakuda'),
+                otkuda: document.getElementById('input-areaotkuda'),
+                price: document.getElementById('input-areatsena')
             };
 
             const errorBlock = document.getElementById('error-message');
