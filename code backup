@@ -1,0 +1,43 @@
+
+  
+<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+  <!-- ... остальные метатеги ... -->
+  
+  <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
+</head>
+<body>
+  <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
+  <div class="frame-1__qr-container">
+    <!-- ... другие элементы ... -->
+    
+    <!-- КОНТЕЙНЕР ДЛЯ ВИДЕО (ЗАМЕНИТЕ ЭТОТ БЛОК) -->
+    <div class="qr-container">
+      <video 
+        id="qr-video"
+        class="video-preview"
+        width="365" 
+        height="150"
+        playsinline
+        muted
+      >
+        <!-- ВНИМАНИЕ: Путь должен совпадать с названием файла в Assets -->
+        <source src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+
+    <!-- ... остальные элементы ... -->
+  </div>
+
+  <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
+  <script src="/script.js"></script>
+  
+  
+</body>
+</html>
+  
+  
+  
+  

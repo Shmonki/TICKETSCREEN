@@ -907,27 +907,7 @@ input:focus {
 }
 
 
-/* Принудительный аппаратный ускорение */
-.video-preview {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Градиентная маска для мобильных */
-@media (hover: none) {
-  .video-preview {
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(0,0,0,1) 70%,
-      rgba(0,0,0,0.5) 80%,
-      rgba(0,0,0,0) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(0,0,0,1) 70%,
-      rgba(0,0,0,0.5) 80%,
-      rgba(0,0,0,0) 100%
-    );
-  }
+#qr-video {
+  cursor: pointer;
+  background: #000000;
 }
