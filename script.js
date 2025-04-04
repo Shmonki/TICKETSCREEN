@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const restoreSource = () => {
     video.innerHTML = '';
     const webmSource = document.createElement('source');
-    webmSource.src = '/assets/qr-animation.webm';
+    webmSource.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm';
     webmSource.type = 'video/webm';
     video.appendChild(webmSource);
     
     const mp4Source = document.createElement('source');
-    mp4Source.src = '/assets/qr-animation.mp4';
+    mp4Source.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4';
     mp4Source.type = 'video/mp4';
     video.appendChild(mp4Source);
     
