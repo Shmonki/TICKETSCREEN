@@ -617,6 +617,9 @@
   position: absolute;
   left: 17px;
   top: 142px;
+    z-index: 2; /* Поднимаем выше фона */
+  transform: translateZ(0); /* Фикс для аппаратного ускорения */
+
 }
 .frame-1__station-2-text2 {
   color: #000000;
@@ -657,6 +660,7 @@
   bottom: 0%;
   top: 0%;
   height: 100%;
+ 
 }
 .frame-1__price-container {
   width: 27px;
@@ -681,6 +685,9 @@
   position: absolute;
   left: 12px;
   top: 716px;
+    z-index: 2; /* Поднимаем выше фона */
+  transform: translateZ(0); /* Фикс для аппаратного ускорения */
+
 }
 .frame-1___48-text2 {
   color: #000000;
