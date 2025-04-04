@@ -191,12 +191,13 @@ function checkForm() {
   
   
   
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 🔧 Подключите ваши стили -->
+    <link rel="stylesheet" href="style.css">
     <style>
         .loader {
             position: fixed;
@@ -208,45 +209,53 @@ function checkForm() {
             color: #666;
             display: none;
         }
+        
+        /* 🔧 Стили вашей кнопки */
+        button {
+            /* Добавьте свои стили из frame-20__button-startuem */
+        }
     </style>
 </head>
 <body>
-    <!-- Кнопка перехода -->
-    <button onclick="loadSecondScreen()">СТАРТУЕМ!</button>
+    <!-- 🔧 Ваша кнопка из макета -->
+    <div class="frame-20__button-startuem">
+        <button onclick="loadSecondScreen()">СТАРТУЕМ!</button>
+    </div>
     
     <!-- Лоадер -->
     <div class="loader" id="loader">ПОДГРУЗКА...</div>
 
     <script>
-        // Флаг кеширования видео
+        // 🔧 Абсолютные ссылки на видео
+        const VIDEO_WEBM_URL = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm';
+        const VIDEO_MP4_URL = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.mp4'; // Если есть MP4
+        
         let isVideoCached = false;
         
         async function loadSecondScreen() {
             const loader = document.getElementById('loader');
             
             try {
-                // Показываем лоадер
                 loader.style.display = 'block';
                 
-                // Если видео не кешировано - грузим
                 if (!isVideoCached) {
                     await cacheVideo();
                     isVideoCached = true;
                 }
                 
-                // Переход на второй экран
                 window.location.href = 'component.html';
             } catch (error) {
-                console.error('Ошибка загрузки:', error);
+                console.error('Ошибка:', error);
                 loader.textContent = 'ОШИБКА ЗАГРУЗКИ';
+                loader.style.color = '#ff0000';
             }
         }
 
         async function cacheVideo() {
             return new Promise((resolve, reject) => {
-                const video = document.createElement('qr-video');
+                const video = document.createElement('video');
                 video.preload = 'auto';
-                video.src = 'https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm'; // Основной источник
+                video.src = VIDEO_MP4_URL || VIDEO_WEBM_URL; // 🔧 Приоритет форматов
                 
                 video.onloadeddata = () => {
                     video.remove();
@@ -259,7 +268,6 @@ function checkForm() {
     </script>
 </body>
 </html>
-  
   
   
   
