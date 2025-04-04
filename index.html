@@ -124,205 +124,112 @@
   </body>
 </html>
 
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./style.css" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vars.css">
+    <link rel="stylesheet" href="./style.css">
     <style>
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-
-        -webkit-font-smoothing: antialiased;
-      }
-
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
+        a, button, input, select, h1, h2, h3, h4, h5, * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
     </style>
     <title>Document</title>
-  </head>
-  <body>
-    <div class="frame-20">
-      <div class="frame-20__frame-19">
-        <div class="frame-20__main-screen"></div>
-      </div>
-      <div class="frame-20__button-startuem">
-        <div class="frame-20__div">стартуем!</div>
-      </div>
-      <div class="frame-20__frame-18">
-        <div class="frame-20__input-area-vokzali"></div>
-      </div>
-      <div class="frame-20__frame-17">
-        <div class="frame-20__toggle-vokzali">
-          <div class="frame-20__knob"></div>
+</head>
+<body>
+    <div class="frame-2">
+        <!-- Основные элементы интерфейса -->
+        <div class="frame-2__buttoncomponent" onclick="checkForm()">
+            <div class="frame-2__buttontext">стартуем!</div>
         </div>
-      </div>
-      <div class="frame-20__frame-16">
-        <div class="frame-20__input-area-svetlaya-tema"></div>
-      </div>
-      <div class="frame-20__frame-15">
-        <div class="frame-20__hint-svetlaya-tema">светлая тема</div>
-      </div>
-      <div class="frame-20__frame-14">
-        <div class="frame-20__toggle-svetlaya-tema">
-          <div class="frame-20__knob"></div>
+
+        <!-- Поля ввода -->
+        <div class="frame-2__areakudacomponent">
+            <input type="text" 
+                   id="input-kuda" 
+                   class="frame-2__areakuda" 
+                   placeholder="КУДА">
         </div>
-      </div>
-      <div class="frame-20__frame-13">
-        <div class="frame-20__input-area-lastochka"></div>
-      </div>
-      <div class="frame-20__frame-12">
-        <div class="frame-20__hint-lastochka">ласточка</div>
-      </div>
-      <div class="frame-20__frame-11">
-        <div class="frame-20__toggle-lastochka">
-          <div class="frame-20__knob"></div>
+
+        <div class="frame-2__areaotkudacomponent">
+            <input type="text" 
+                   id="input-otkuda" 
+                   class="frame-2__areaotkuda" 
+                   placeholder="ОТКУДА">
         </div>
-      </div>
-      <div class="frame-20__frame-10">
-        <div class="frame-20__input-tuda-obratno"></div>
-      </div>
-      <div class="frame-20__frame-9">
-        <div class="frame-20__hint-tuda-obratno">туда обратно</div>
-      </div>
-      <div class="frame-20__frame-8">
-        <div class="frame-20__toggle-tuda-obratno">
-          <div class="frame-20__knob"></div>
+
+        <div class="frame-2__areatsenacomponent">
+            <input type="number" 
+                   id="input-price" 
+                   class="frame-2__areatsena" 
+                   placeholder="ЦЕНА">
         </div>
-      </div>
-      <div class="frame-20__frame-7">
-        <div class="frame-20__input-area-price"></div>
-      </div>
-      <div class="frame-20__frame-6">
-        <div class="frame-20__hint-prise">цена (48)</div>
-      </div>
-      <div class="frame-20__frame-5">
-        <div class="frame-20__input-area-otkuda"></div>
-      </div>
-      <div class="frame-20__frame-4">
-        <div class="frame-20__hint-otkuda">откуда</div>
-      </div>
-      <div class="frame-20__frame-3">
-        <div class="frame-20__input-area-kuda"></div>
-      </div>
-      <div class="frame-20__frame-2">
-        <div class="frame-20__hint-kuda">куда</div>
-      </div>
-      <div class="frame-20__frame-1">
-        <div class="frame-20__bottom-bar"></div>
-      </div>
-      <div class="frame-20__up-bar"></div>
-      <div class="frame-20__annotation-2">
-        чтобы вернуться на этот экран
-        <br />
-        потяни вправо значок билета
-      </div>
-      <div class="frame-20__annotation-1">настройки</div>
-    </div>
 
-    <!-- Внутри тега body заменим блоки с вводом данных -->
-    <div class="frame-20">
-      <!-- ... остальные элементы ... -->
+        <!-- Остальные компоненты -->
+        <div class="frame-2__switch-1-component">
+            <div class="frame-2__knob"></div>
+        </div>
 
-      <!-- Поле "Куда" -->
-      <div class="frame-20__frame-3">
-        <input
-          type="text"
-          id="input-kuda"
-          class="frame-20__input-area-kuda"
-          placeholder="КУДА"
-        />
-      </div>
+        <svg class="frame-2__barscomponent" 
+             width="390" 
+             height="844" 
+             viewBox="0 0 390 844" 
+             fill="none" 
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 761H390V844H0V761Z" fill="#222222"/>
+            <path d="M0 0H390V91H0V0Z" fill="#222222"/>
+        </svg>
 
-      <!-- Поле "Откуда" -->
-      <div class="frame-20__frame-5">
-        <input
-          type="text"
-          id="input-otkuda"
-          class="frame-20__input-area-otkuda"
-          placeholder="ОТКУДА"
-        />
-      </div>
-
-      <!-- Поле "Цена" -->
-      <div class="frame-20__frame-7">
-        <input
-          type="number"
-          id="input-price"
-          class="frame-20__input-area-price"
-          placeholder="ЦЕНА"
-        />
-      </div>
-
-      <!-- Кнопка (добавим обработчик) -->
-      <div class="frame-20__button-startuem" onclick="checkForm()">
-        <div class="frame-20__div">СТАРТУЕМ!</div>
-      </div>
-
-      <!-- Блок для ошибок -->
-      <div
-        id="error-message"
-        style="
-          display: none;
-          color: red;
-          position: fixed;
-          top: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-        "
-      ></div>
+        <!-- Блок ошибок -->
+        <div id="error-message" 
+             style="display: none; color: red; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);">
+        </div>
     </div>
 
     <script>
-      function checkForm() {
-        // Получаем значения
-        const kuda = document.getElementById("input-kuda").value;
-        const otkuda = document.getElementById("input-otkuda").value;
-        const price = document.getElementById("input-price").value;
-        const errorBlock = document.getElementById("error-message");
+        function checkForm() {
+            const inputs = {
+                kuda: document.getElementById('input-kuda'),
+                otkuda: document.getElementById('input-otkuda'),
+                price: document.getElementById('input-price')
+            };
 
-        // Проверяем заполнение
-        let errorText = "";
-        if (!kuda) errorText = 'ВВЕДИТЕ "КУДА"';
-        else if (!otkuda) errorText = 'ВВЕДИТЕ "ОТКУДА"';
-        else if (!price) errorText = 'ВВЕДИТЕ "ЦЕНУ"';
+            const errorBlock = document.getElementById('error-message');
+            let errorText = '';
 
-        if (errorText) {
-          errorBlock.textContent = errorText;
-          errorBlock.style.display = "block";
-          return;
+            if (!inputs.kuda.value) errorText = 'ВВЕДИТЕ "КУДА"';
+            else if (!inputs.otkuda.value) errorText = 'ВВЕДИТЕ "ОТКУДА"';
+            else if (!inputs.price.value) errorText = 'ВВЕДИТЕ "ЦЕНУ"';
+
+            if (errorText) {
+                errorBlock.textContent = errorText;
+                errorBlock.style.display = 'block';
+                return;
+            }
+
+            localStorage.setItem('formData', JSON.stringify({
+                kuda: inputs.kuda.value,
+                otkuda: inputs.otkuda.value,
+                price: inputs.price.value
+            }));
+            
+            window.location.href = 'component.html';
         }
-
-        // Сохраняем данные и переходим
-        localStorage.setItem(
-          "formData",
-          JSON.stringify({ kuda, otkuda, price })
-        );
-        window.location.href = "component.html";
-      }
     </script>
-  </body>
+</body>
 </html>
