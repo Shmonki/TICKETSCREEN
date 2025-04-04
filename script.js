@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Уникальные классы для элементов
   const elements = {
     today: {
-      number: document.querySelector('.frame-1___29-text'), // Число
-      month: document.querySelector('.frame-1__fevralyacontainer2') // Контейнер месяца
+      number: document.querySelector('frame-1___29-text'), // Число
+      month: document.querySelector('.frame-1__text2') // Контейнер месяца
     },
     tomorrow: {
-      number: document.querySelector('.frame-1___30-text'),
-      month: document.querySelector('.frame-1__fevralyacontainer3')
+      number: document.querySelector('frame-1___30-text'),
+      month: document.querySelector('.frame-1__text4')
     }
   };
 
