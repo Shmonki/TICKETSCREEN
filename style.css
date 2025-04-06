@@ -124,7 +124,7 @@
   font-weight: 400;
   position: absolute;
   right: 0%;
-  left: -1.24%;
+  left: -0.5%;
   width: 101.24%;
   bottom: 0%;
   top: 0%;
@@ -145,26 +145,11 @@
   line-height: 22px;
   font-weight: 400;
   position: absolute;
-  left: -9px;
+  left: -2px;
   bottom: 0%;
   top: 0%;
   height: 100%;
   width: 324px;
-
-}
-.frame-1__stationonetext {
-  color: #000000;
-  text-align: center;
-  font-family: "RobotoFlex-Regular", sans-serif;
-  font-size: 23px;
-  line-height: 22px;
-  font-weight: 400;
-  position: absolute;
-  left: -30px;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-  width: 341px;
 }
 .frame-1__pricecomponent {
   width: 24px;
