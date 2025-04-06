@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./style.css">
-  
-  
-    </head>
-<body>
   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +30,11 @@
     </style>
   
    <title>Document</title>
+  
+  <html>
+    <head>
+       
+<body>
  
   <div class="frame-2">
        <div class="frame-2">
@@ -196,6 +197,54 @@
         }
     </script>
   
+  
+    <script>
+  // Фикс для iOS
+  document.addEventListener('DOMContentLoaded', () => {
+    // Блокируем автоматический фокус
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      document.activeElement.blur();
+    }
+
+    // Добавляем задержку для инициализации
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.style.height = '100%';
+    }, 100);
+  });
+
+  function checkForm() {
+    const inputs = {
+      kuda: document.getElementById('input-areakuda'),
+      otkuda: document.getElementById('input-areaotkuda'),
+      price: document.getElementById('input-areatsena')
+    };
+
+    const errorBlock = document.getElementById('error-message');
+    errorBlock.style.display = 'none';
+
+    // Валидация
+    const errors = [];
+    if (!inputs.kuda.value.trim()) errors.push('КУДА');
+    if (!inputs.otkuda.value.trim()) errors.push('ОТКУДА');
+    if (!inputs.price.value.trim()) errors.push('ЦЕНУ');
+
+    if (errors.length) {
+      errorBlock.textContent = `ВВЕДИТЕ: ${errors.join(', ')}`;
+      errorBlock.style.display = 'block';
+      return;
+    }
+
+    // Сохранение данных
+    localStorage.setItem('formData', JSON.stringify({
+      kuda: inputs.kuda.value.trim(),
+      otkuda: inputs.otkuda.value.trim(),
+      price: inputs.price.value.trim() || '48' // Значение по умолчанию
+    }));
+
+    window.location.href = 'component.html';
+  }
+  </script>
   
   
   
