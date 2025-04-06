@@ -190,11 +190,14 @@
   top: 0%;
 }
 .frame-1__drugcontainercomponent {
-  width: 73px;
-  height: 56px;
-  position: absolute;
-  left: 160px;
-  top: 761px;
+   position: fixed;
+  width: 50px;
+  height: 10%;
+  right: 0;
+  top: 0;
+  background: green;
+  z-index: 9999;
+  cursor: grab;
 }
 .frame-1__drugcontainertext {
   background: rgba(217, 217, 217, 0);
@@ -684,36 +687,7 @@
 }
 
 
-/* Стили для полей ввода */
-.frame-20__input-area-kuda,
-.frame-20__input-area-otkuda,
-.frame-20__input-area-price {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #cccccc;
-  border-radius: 8px;
-}
 
-/* Плейсхолдеры */
-::placeholder {
-  color: #666666;
-  font-style: "RobotoSerif-Regular", sans-serif;
-}
-
-
-/* Стили для обоих экранов */
-.frame-2__secretdrugcomponent,
-.frame-1__drugcontainercomponent {
-  position: fixed;
-  width: 50px;
-  height: 10%;
-  right: 0;
-  top: 0;
-  background: green;
-  z-index: 9999;
-  cursor: grab;
-}
 
 
 
