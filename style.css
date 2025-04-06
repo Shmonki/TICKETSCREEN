@@ -195,7 +195,7 @@
   height: 10%;
   right: 0;
   top: 0;
-  background: green;
+  background: transparent;
   z-index: 9999;
   cursor: grab;
 }
@@ -704,7 +704,7 @@
 }
 
 
-..body {
+body {
     margin: 0;
     padding: 0;
     overflow: hidden;

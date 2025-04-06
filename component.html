@@ -69,8 +69,6 @@
     </div>
   </div>
   
-</body>
-</html>
 
 
 
@@ -172,61 +170,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-<!-- Для component.html -->
-<div
-  class="frame-1__drug-container"
-  ontouchstart="handleTouchStart(event)"
-  ontouchend="handleTouchEnd(event)"
-  onmousedown="handleMouseStart(event)"
-  onmouseup="handleMouseEnd(event)"
->
-  <div class="frame-1__drug-container2"></div>
-</div>
-
-<script>
-  let startX = 0;
-  let isDragging = false;
-  const MIN_SWIPE_DISTANCE = 100; // Минимальная дистанция свайпа
-
-  // Для тач-устройств
-  function handleTouchStart(e) {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  }
-
-  function handleTouchEnd(e) {
-    if (!isDragging) return;
-    const endX = e.changedTouches[0].clientX;
-    handleSwipe(endX - startX);
-    isDragging = false;
-  }
-
-  // Для десктопов
-  function handleMouseStart(e) {
-    startX = e.clientX;
-    isDragging = true;
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseEnd);
-  }
-
-  function handleMouseMove(e) {
-    if (!isDragging) return;
-    const currentX = e.clientX;
-    handleSwipe(currentX - startX);
-  }
-
-  function handleMouseEnd(e) {
-    isDragging = false;
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseEnd);
-  }
-
-  // Общая проверка жеста
-  function handleSwipe(deltaX) {
-    if (deltaX < -MIN_SWIPE_DISTANCE) {
-      // Свайп влево
-      window.location.href = "index.html";
-    }
-  }
-</script>
+</body>
+</html>
