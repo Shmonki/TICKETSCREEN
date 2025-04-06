@@ -721,34 +721,3 @@ body {
   overflow: hidden;
   height: 100vh;
 }
-
-
-/* Стили для видео-контейнера */
-#qr-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  -webkit-media-controls: none !important;
-  -moz-media-controls: none !important;
-  media-controls: none !important;
-}
-
-/* Скрытие элементов управления в разных браузерах */
-#qr-video::-webkit-media-controls-enclosure,
-#qr-video::-webkit-media-controls-panel,
-#qr-video::-webkit-media-controls-play-button,
-#qr-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-}
-
-/* Стили для обертки видео */
-.video-wrapper {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  background: black;
-}
