@@ -169,6 +169,52 @@ document.addEventListener('DOMContentLoaded', function() {
 .frame-1__qrcontainercomponent { position: absolute; top: 247px; left: 18px; }
 </style>
 
+ <head> 
+    <style>
+    /* Добавляем стили для видео */
+    .frame-1__qr-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    
+    /* Скрываем стандартные элементы управления */
+    .frame-1__qr-container video::-webkit-media-controls {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- ... остальная разметка ... -->
+  
+  <div class="frame-1__qrcontainercomponent">
+    <div class="frame-1__qr-container">
+      <video id="qr-video" width="822" height="318" 
+             src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm"
+             autoplay="false"
+             controls="false"
+             loop="false"
+             onclick="this.play()"
+             onended="this.currentTime=0;">
+      </video>
+    </div>
+  </div>
+
+  <!-- ... остальной код ... -->
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Блокировка паузы
+    const video = document.getElementById('qr-video');
+    video.addEventListener('pause', (e) => {
+      if(!video.ended) video.play();
+    });
+    
+    // Автоматический запуск при загрузке (опционально)
+    // video.play().catch(() => {/* Обработка ошибок */});
+  });
+  </script>
 
 
 </body>
