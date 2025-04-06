@@ -171,84 +171,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
   
+  <head>
+  <!-- Обязательные метатеги -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
- <head>
-  <!-- ... остальные метатеги ... -->
-  <style>
-    /* Скрываем все элементы управления */
-    #qr-video::-webkit-media-controls {
-      display: none !important;
-    }
-    #qr-video::-webkit-media-controls-enclosure {
-      display: none !important;
-    }
-    #qr-video::-webkit-media-controls-panel {
-      display: none !important;
-    }
-    
-    /* Фикс для iOS */
-    .video-wrapper {
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      user-select: none;
-    }
-  </style>
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ... остальная разметка ... -->
-  
+  <!-- Основная разметка -->
   <div class="frame-1__qrcontainercomponent">
     <div class="frame-1__qr-container video-wrapper">
       <video id="qr-video" 
              src="https://cdn.glitch.global/e01bdc14-9dc5-42f2-b393-aa2f0de7a5be/qr-animation.webm"
              playsinline
              webkit-playsinline
-             preload="auto"
+             preload="metadata"
              muted
-             controls="false"
              style="object-fit: cover;">
       </video>
     </div>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById('qr-video');
-    let wasPlaying = false;
-
-    // Обработчик клика
-    video.addEventListener('click', function(e) {
-      e.preventDefault();
-      if(this.paused) {
-        this.play().catch(() => {});
-      }
-    });
-
-    // Блокировка полноэкранного режима
-    video.addEventListener('webkitbeginfullscreen', (e) => {
-      e.preventDefault();
-      video.webkitExitFullscreen();
-    });
-
-    // Сброс видео после завершения
-    video.addEventListener('ended', () => {
-      video.currentTime = 0;
-      video.pause();
-    });
-
-    // Блокировка стандартного поведения
-    video.addEventListener('play', () => {
-      video.controls = false;
-    });
-
-    // Предотвращение контекстного меню
-    video.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-      return false;
-    });
-  });
-  </script>
+  <!-- Подключение скриптов -->
+  <script src="script.js"></script>
 </body>
+   
 
 
 </body>
