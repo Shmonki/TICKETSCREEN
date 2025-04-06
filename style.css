@@ -104,11 +104,11 @@
   height: 100%;
 }
 .frame-1__stationtwocomponent {
-  width: 130px;
+  width: 322px;
   height: 22px;
   position: absolute;
-  left: 17px;
-  top: 142px;
+  left: 18px;
+  top: 139px;
 }
 .frame-1__stationtwotext {
   color: #000000;
@@ -118,18 +118,18 @@
   line-height: 22px;
   font-weight: 400;
   position: absolute;
-  right: -20.77%;
-  left: -21.54%;
-  width: 142.31%;
-  bottom: -13.64%;
-  top: 13.64%;
+  right: 0.15%;
+  left: -0.15%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
   height: 100%;
 }
 .frame-1__stationonecomponent {
-  width: 373px;
+  width: 328px;
   height: 22px;
   position: absolute;
-  left: 13px;
+  left: 12px;
   top: 117px;
 }
 .frame-1__stationonetext {
@@ -140,12 +140,11 @@
   line-height: 22px;
   font-weight: 400;
   position: absolute;
-  right: 3.75%;
-  left: -35.66%;
-  width: 131.9%;
+  left: 0px;
   bottom: 0%;
   top: 0%;
   height: 100%;
+  width: 341px;
 }
 .frame-1__pricecomponent {
   width: 24px;
@@ -699,7 +698,7 @@
 /* Плейсхолдеры */
 ::placeholder {
   color: #666666;
-  font-style: italic;
+  font-style: "RobotoSerif-Regular", sans-serif;
 }
 
 
