@@ -223,14 +223,6 @@
   -webkit-transform: translateZ(0); /* Фикс рендеринга */
 }
 
-/* Добавить в style.css */
-.frame-1__stationonetext,
-.frame-1__stationtwotext,{
-    text-transform: capitalize !important;
-    font-variant: normal !important;
-}
-
-
 
 
 

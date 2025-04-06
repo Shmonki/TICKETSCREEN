@@ -89,19 +89,25 @@
 </div>
 
 <script>
-  // При загрузке страницы
  document.addEventListener("DOMContentLoaded", () => {
     const data = JSON.parse(localStorage.getItem("formData"));
 
     if (data) {
-        // Исправляем регистр для "Куда"
+        // Для "Куда"
+        const kuda = data.kuda.trim();
         document.getElementById("output-kuda").textContent = 
-            data.kuda.charAt(0).toUpperCase() + data.kuda.slice(1).toLowerCase();
-        
-        // Исправляем регистр для "Откуда"
-        const formattedOtkuda = data.otkuda.charAt(0).toUpperCase() + 
-                       data.otkuda.slice(1).toLowerCase();
-document.getElementById("output-otkuda").textContent = `- ${formattedOtkuda}`;
+            kuda.charAt(0).toUpperCase() + kuda.slice(1).toLowerCase();
+
+        // Для "Откуда"
+        const otkuda = data.otkuda.trim();
+        const formattedOtkuda = otkuda.charAt(0).toUpperCase() + 
+                               otkuda.slice(1).toLowerCase();
+        document.getElementById("output-otkuda").textContent = `- ${formattedOtkuda}`;
+
+        // Для цены
+        document.getElementById("output-price").textContent = data.price;
+    }
+});
 </script>
 
 
