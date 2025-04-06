@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./vars.css">
     <link rel="stylesheet" href="./style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         a, button, input, select, h1, h2, h3, h4, h5, * {
             box-sizing: border-box;
@@ -31,8 +32,7 @@
   
    <title>Document</title>
   
-  <html>
-    <head>
+  </head>
        
 <body>
  
@@ -199,19 +199,6 @@
   
   
     <script>
-  // Фикс для iOS
-  document.addEventListener('DOMContentLoaded', () => {
-    // Блокируем автоматический фокус
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      document.activeElement.blur();
-    }
-
-    // Добавляем задержку для инициализации
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      document.body.style.height = '100%';
-    }, 100);
-  });
 
   function checkForm() {
     const inputs = {
