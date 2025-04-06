@@ -99,11 +99,9 @@
             data.kuda.charAt(0).toUpperCase() + data.kuda.slice(1).toLowerCase();
         
         // Исправляем регистр для "Откуда"
-        const otkuda = `- ${data.otkuda}`;
-        document.getElementById("output-otkuda").textContent = 
-            otkuda.charAt(0).toUpperCase() + otkuda.slice(1).toLowerCase();
-        
-        document.getElementById("output-price").textContent = data.price;  }});
+        const formattedOtkuda = data.otkuda.charAt(0).toUpperCase() + 
+                       data.otkuda.slice(1).toLowerCase();
+document.getElementById("output-otkuda").textContent = `- ${formattedOtkuda}`;
 </script>
 
 
