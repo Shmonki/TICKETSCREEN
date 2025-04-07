@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+  <link rel="stylesheet" href="./css/vars.css">
+  <link rel="stylesheet" href="./css/style.css">
+   
+    <style>
+        a, button, input, select, h1, h2, h3, h4, h5, * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+  
+   <title>Document</title>
+  
+  </head>
+       
+<body>
+ 
+  <div class="frame-2">
+       <div class="frame-2">
+    
+    <div class="frame-2___1-screen">
+      <div class="frame-2___1-screen2"></div>
+    </div>
+    <div class="frame-2__buttoncomponent">
+      <div class="frame-2__div">стартуем!</div>
+    </div>
+    <div class="frame-2__areavokzalcomponent">
+      <div class="frame-2__areavokzal"></div>
+    </div>
+    <div class="frame-2__switch-4-component">
+      <div class="frame-2__knob"></div>
+    </div>
+    <div class="frame-2__areasvetlayatemacomponent">
+      <div class="frame-2__areasvetlayatema"></div>
+    </div>
+    <div class="frame-2__svetlayatemacomponent">
+      <div class="frame-2__svetlayatematext">светлая тема</div>
+    </div>
+    <div class="frame-2__switch-3-component">
+      <div class="frame-2__knob"></div>
+    </div>
+    <div class="frame-2__arealastochkacomponent">
+      <div class="frame-2__arealastochka"></div>
+    </div>
+    <div class="frame-2__lastochkacomponent">
+      <div class="frame-2__lastochkatext">ласточка</div>
+    </div>
+    <div class="frame-2__switch-2-component">
+      <div class="frame-2__knob"></div>
+    </div>
+    <div class="frame-2__areatudaobratnocomponent">
+      <div class="frame-2__areatudaobratno"></div>
+    </div>
+    <div class="frame-2__tudaobratnocomponent">
+      <div class="frame-2__tudaobratnotext">туда обратно</div>
+    </div>
+    <div class="frame-2__switch-1-component">
+      <div class="frame-2__knob"></div>
+    </div>
+    <div class="frame-2__areatsenacomponent">
+      <div class="frame-2__areatsena"></div>
+    </div>
+    <div class="frame-2__tsenacomponent">
+      <div class="frame-2__tsenatext">
+        <span>
+          <span class="tsenatext-span">цена</span>
+          <span class="tsenatext-span2">(по умолчанию 48)</span>
+        </span>
+      </div>
+    </div>
+    <div class="frame-2__areaotkudacomponent">
+      <div class="frame-2__areaotkuda"></div>
+    </div>
+    <div class="frame-2__otkudacomponent">
+      <div class="frame-2__otkudatext">откуда</div>
+    </div>
+    <div class="frame-2__areakudacomponent">
+      <div class="frame-2__areakuda"></div>
+    </div>
+    <div class="frame-2__kudacomponent">
+      <div class="frame-2__kudatext">куда</div>
+    </div>
+         
+         <svg
+      class="frame-2__barscomponent"
+      width="390"
+      height="844"
+      viewBox="0 0 390 844"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 761H390V844H0V761Z" fill="#222222" />
+      <path d="M0 0H390V91H0V0Z" fill="#222222" />
+    </svg>
+         
+    <div class="frame-2__instructionannotationcomponent">
+      <div class="frame-2__instructionannotation">
+        чтобы вернуться на этот экран
+        <br />
+        потяни вправо значок билета
+      </div>
+    </div>
+    <div class="frame-2__settingsannotationcomponent">
+      <div class="frame-2__settingsannotation">настройки</div>
+    </div>
+  </div>
+      </div>
+
+
+   
+
+ 
+        <!-- Обновлённые поля ввода -->
+        <div class="frame-2__areakudacomponent">
+            <input type="text" 
+                   id="input-areakuda" 
+                   class="frame-2__areakuda" 
+                   placeholder="КУДА">
+        </div>
+
+        <div class="frame-2__areaotkudacomponent">
+            <input type="text" 
+                   id="input-areaotkuda" 
+                   class="frame-2__areaotkuda" 
+                   placeholder="ОТКУДА">
+        </div>
+
+        <div class="frame-2__areatsenacomponent">
+            <input type="number" 
+                   id="input-areatsena" 
+                   class="frame-2__areatsena" 
+                   placeholder="ЦЕНА">
+          </div>
+
+
+        <!-- Кнопка с новым классом -->
+        <div class="frame-2__buttoncomponent" onclick="checkForm()">
+            <div class="frame-2__buttontext">СТАРТУЕМ!
+          
+          </div>
+        
+
+        <!-- Блок ошибок -->
+        <div id="error-message" 
+             style="display: none; color: red;
+                    position: fixed;
+                    top: 20px; 
+                    left: 50%; 
+                    transform: translateX(-50%);">
+        </div>
+    </div>
+
+    <script>
+        function checkForm() {
+            // Используем новые ID
+            const inputs = {
+                kuda: document.getElementById('input-areakuda'),
+                otkuda: document.getElementById('input-areaotkuda'),
+                price: document.getElementById('input-areatsena')
+            };
+
+            const errorBlock = document.getElementById('error-message');
+            let errorText = '';
+
+            if (!inputs.kuda.value) errorText = 'ВВЕДИТЕ "КУДА"';
+            else if (!inputs.otkuda.value) errorText = 'ВВЕДИТЕ "ОТКУДА"';
+            else if (!inputs.price.value) errorText = 'ВВЕДИТЕ "ЦЕНУ"';
+
+            if (errorText) {
+                errorBlock.textContent = errorText;
+                errorBlock.style.display = 'block';
+                return;
+            }
+
+            localStorage.setItem('formData', JSON.stringify({
+                kuda: inputs.kuda.value,
+                otkuda: inputs.otkuda.value,
+                price: inputs.price.value
+            }));
+            
+            window.location.href = 'component.html';
+        }
+    </script>
+  
+  
+    <script>
+
+  function checkForm() {
+    const inputs = {
+      kuda: document.getElementById('input-areakuda'),
+      otkuda: document.getElementById('input-areaotkuda'),
+      price: document.getElementById('input-areatsena')
+    };
+
+    const errorBlock = document.getElementById('error-message');
+    errorBlock.style.display = 'none';
+
+    // Валидация
+    const errors = [];
+    if (!inputs.kuda.value.trim()) errors.push('КУДА');
+    if (!inputs.otkuda.value.trim()) errors.push('ОТКУДА');
+    if (!inputs.price.value.trim()) errors.push('ЦЕНУ');
+
+    if (errors.length) {
+      errorBlock.textContent = `ВВЕДИТЕ: ${errors.join(', ')}`;
+      errorBlock.style.display = 'block';
+      return;
+    }
+
+    // Сохранение данных
+    localStorage.setItem('formData', JSON.stringify({
+      kuda: inputs.kuda.value.trim(),
+      otkuda: inputs.otkuda.value.trim(),
+      price: inputs.price.value.trim() || '48' // Значение по умолчанию
+    }));
+
+    window.location.href = 'component.html';
+  }
+  </script>
+  
+  
+  
+  
+  
+  
+</body>
+</html>
