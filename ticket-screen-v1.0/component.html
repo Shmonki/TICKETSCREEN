@@ -1,216 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+      initial-scale=1.0, 
+      maximum-scale=1.0,
+     viewport-fit=cover"/>
+    
+    
+    <link rel="stylesheet" 
+          href="./css/vars.css" />
+    <link rel="stylesheet" 
+          href="./css/style.css" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    
+  </head>
+<title>Document</title>
   
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,
-                                 initial-scale=1.0, 
-                                 maximum-scale=1.0,
-                                 viewport-fit=cover">
-  <link rel="stylesheet" href="./css/vars.css">
-  <link rel="stylesheet" href="./css/style.css">
-  
-  
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-  
-<body>
-  <div class="frame-1">
-    <img class="frame-1__blankscreen" src="assets/images/blankscreen1.png" />
-    <div class="frame-1__datetwocomponent">
-      <div class="frame-1__datetwotext">февраля</div>
+  <body>
+    <div class="frame-1">
+      <img class="frame-1__blankscreen" src="assets/images/blankscreen1.png" />
+      <div class="frame-1__datetwocomponent">
+        <div class="frame-1__datetwotext">февраля</div>
+      </div>
+      <div class="frame-1__numbertwocomponent">
+        <div class="frame-1__numbertwotext">30</div>
+      </div>
+      <div class="frame-1__dateonecomponent">
+        <div class="frame-1__dateonetext">февраля</div>
+      </div>
+      <div class="frame-1__numberonecomponent">
+        <div class="frame-1__nomberonetext">29</div>
+      </div>
+      <div class="frame-1__stationtwocomponent">
+        <div class="frame-1__stationtwotext"></div>
+      </div>
+      <div class="frame-1__stationonecomponent">
+        <div class="frame-1__stationonetext"></div>
+      </div>
+      <div class="frame-1__pricecomponent">
+        <div class="frame-1__pricetext"></div>
+      </div>
+      <div class="frame-1__qrcontainercomponent">
+        <div class="frame-1__qr-container"></div>
+      </div>
+      <div class="frame-1__drugcontainercomponent">
+        <div class="frame-1__drugcontainertext"></div>
+      </div>
     </div>
-    <div class="frame-1__numbertwocomponent">
-      <div class="frame-1__numbertwotext">30</div>
-    </div>
-    <div class="frame-1__dateonecomponent">
-      <div class="frame-1__dateonetext">февраля</div>
-    </div>
-    <div class="frame-1__numberonecomponent">
-      <div class="frame-1__nomberonetext">29</div>
-    </div>
-    <div class="frame-1__stationtwocomponent">
-      <div class="frame-1__stationtwotext"></div>
-    </div>
+
     <div class="frame-1__stationonecomponent">
-      <div class="frame-1__stationonetext"></div>
+      <!-- Здесь будет "Финляндский вокзал" -->
+      <div class="frame-1__stationonetext" id="output-kuda"></div>
     </div>
+
+    <div class="frame-1__stationtwocomponent">
+      <!-- Здесь будет "- Парголово" -->
+      <div class="frame-1__stationtwotext" id="output-otkuda"></div>
+    </div>
+
     <div class="frame-1__pricecomponent">
-      <div class="frame-1__pricetext"></div>
+      <!-- Здесь будет "48" -->
+      <div class="frame-1__pricetext" id="output-price"></div>
     </div>
-    <div class="frame-1__qrcontainercomponent">
-      <div class="frame-1__qr-container"></div>
-    </div>
-    <div class="frame-1__drugcontainercomponent">
-      <div class="frame-1__drugcontainertext"></div>
-    </div>
-  </div>
-  
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const data = JSON.parse(localStorage.getItem("formData"));
 
-
-<div class="frame-1__stationonecomponent">
-  <!-- Здесь будет "Финляндский вокзал" -->
-  <div class="frame-1__stationonetext" id="output-kuda"></div>
-</div>
-
-<div class="frame-1__stationtwocomponent">
-  <!-- Здесь будет "- Парголово" -->
-  <div class="frame-1__stationtwotext" id="output-otkuda"></div>
-</div>
-
-<div class="frame-1__pricecomponent">
-  <!-- Здесь будет "48" -->
-  <div class="frame-1__pricetext" id="output-price"></div>
-</div>
-
-<script>
- document.addEventListener("DOMContentLoaded", () => {
-    const data = JSON.parse(localStorage.getItem("formData"));
-
-    if (data) {
-        // Для "Куда"
-        const kuda = data.kuda.trim();
-        document.getElementById("output-kuda").textContent = 
+        if (data) {
+          // Для "Куда"
+          const kuda = data.kuda.trim();
+          document.getElementById("output-kuda").textContent =
             kuda.charAt(0).toUpperCase() + kuda.slice(1).toLowerCase();
 
-        // Для "Откуда"
-        const otkuda = data.otkuda.trim();
-        const formattedOtkuda = otkuda.charAt(0).toUpperCase() + 
-                               otkuda.slice(1).toLowerCase();
-        document.getElementById("output-otkuda").textContent = `- ${formattedOtkuda}`;
+          // Для "Откуда"
+          const otkuda = data.otkuda.trim();
+          const formattedOtkuda =
+            otkuda.charAt(0).toUpperCase() + otkuda.slice(1).toLowerCase();
+          document.getElementById(
+            "output-otkuda"
+          ).textContent = `- ${formattedOtkuda}`;
 
-        // Для цены
-        document.getElementById("output-price").textContent = data.price;
-    }
-});
-</script>
+          // Для цены
+          document.getElementById("output-price").textContent = data.price;
+        }
+      });
+    </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Массив названий месяцев
+        const months = [
+          "января",
+          "февраля",
+          "марта",
+          "апреля",
+          "мая",
+          "июня",
+          "июля",
+          "августа",
+          "сентября",
+          "октября",
+          "ноября",
+          "декабря",
+        ];
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Массив названий месяцев
-    const months = [
-        'января', 'февраля', 'марта', 'апреля',
-        'мая', 'июня', 'июля', 'августа',
-        'сентября', 'октября', 'ноября', 'декабря'
-    ];
+        // Сегодняшняя дата
+        const today = new Date();
+        // Завтрашняя дата
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
 
-    // Сегодняшняя дата
-    const today = new Date();
-    // Завтрашняя дата
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
+        // Обновляем элементы
+        function updateDateElements() {
+          // Сегодняшнее число
+          document.querySelector(".frame-1__nomberonetext").textContent =
+            today.getDate();
+          // Сегодняшний месяц
+          document.querySelector(".frame-1__dateonetext").textContent =
+            months[today.getMonth()];
 
-    // Обновляем элементы
-    function updateDateElements() {
-        // Сегодняшнее число
-        document.querySelector('.frame-1__nomberonetext').textContent = today.getDate();
-        // Сегодняшний месяц
-        document.querySelector('.frame-1__dateonetext').textContent = months[today.getMonth()];
-        
-        // Завтрашнее число
-        document.querySelector('.frame-1__numbertwotext').textContent = tomorrow.getDate();
-        // Завтрашний месяц
-        document.querySelector('.frame-1__datetwotext').textContent = months[tomorrow.getMonth()];
-    }
+          // Завтрашнее число
+          document.querySelector(".frame-1__numbertwotext").textContent =
+            tomorrow.getDate();
+          // Завтрашний месяц
+          document.querySelector(".frame-1__datetwotext").textContent =
+            months[tomorrow.getMonth()];
+        }
 
-    // Инициализация
-    updateDateElements();
-});
-</script>
+        // Инициализация
+        updateDateElements();
+      });
+    </script>
 
-<style>
-/* Исправление позиционирования */
-.frame-1 {
-    position: relative;
-    overflow: hidden;
-    height: 100vh; /* Фиксируем высоту экрана */
-}
+    <style>
+      /* Исправление позиционирования */
+      .frame-1 {
+        position: relative;
+        overflow: hidden;
+        height: 100vh; /* Фиксируем высоту экрана */
+      }
 
-.frame-1__blankscreen {
-    position: absolute;
-    z-index: 0; /* Фон должен быть ниже контента */
-}
+      .frame-1__blankscreen {
+        position: absolute;
+        z-index: 0; /* Фон должен быть ниже контента */
+      }
 
-/* Стили для текстовых блоков */
-.frame-1__stationonecomponent,
-.frame-1__stationtwocomponent,
-.frame-1__pricecomponent {
-    position: relative;
-    z-index: 2; /* Поднимаем над фоном */
-    transform: translateZ(0); /* Фикс для аппаратного ускорения */
-}
+      /* Стили для текстовых блоков */
+      .frame-1__stationonecomponent,
+      .frame-1__stationtwocomponent,
+      .frame-1__pricecomponent {
+        position: relative;
+        z-index: 2; /* Поднимаем над фоном */
+        transform: translateZ(0); /* Фикс для аппаратного ускорения */
+      }
 
-/* Конкретные позиции элементов (настройте под ваш макет) */
-.frame-1__datetwocomponent { position: absolute; top: 205px; left: 158px; }
-.frame-1__numbertwocomponent { position: absolute; top: 205px; left: 154px; }
-.frame-1__dateonecomponent { position: absolute; top: 180px; left: 28px; }
-.frame-1__numberonecomponent { position: absolute; top: 180px; left: 10px; }
-.frame-1__stationtwocomponent { position: absolute; top: 142px; left: 15px; }
-.frame-1__stationonecomponent { position: absolute; top: 117px; left: 16px; }
-.frame-1__pricecomponent { position: absolute; top: 716px; left: 12px; }
-.frame-1__qrcontainercomponent { position: absolute; top: 247px; left: 18px; }
-</style>
+      /* Конкретные позиции элементов (настройте под ваш макет) */
+      .frame-1__datetwocomponent {
+        position: absolute;
+        top: 205px;
+        left: 158px;
+      }
+      .frame-1__numbertwocomponent {
+        position: absolute;
+        top: 205px;
+        left: 154px;
+      }
+      .frame-1__dateonecomponent {
+        position: absolute;
+        top: 180px;
+        left: 28px;
+      }
+      .frame-1__numberonecomponent {
+        position: absolute;
+        top: 180px;
+        left: 10px;
+      }
+      .frame-1__stationtwocomponent {
+        position: absolute;
+        top: 142px;
+        left: 15px;
+      }
+      .frame-1__stationonecomponent {
+        position: absolute;
+        top: 117px;
+        left: 16px;
+      }
+      .frame-1__pricecomponent {
+        position: absolute;
+        top: 716px;
+        left: 12px;
+      }
+      .frame-1__qrcontainercomponent {
+        position: absolute;
+        top: 247px;
+        left: 18px;
+      }
+    </style>
 
-  
-  
-  <head>
-  <!-- Обязательные метатеги -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  
-  <!-- Подключение стилей -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Основная разметка -->
-  <div class="frame-1__qrcontainercomponent">
-    <div class="frame-1__qr-container video-wrapper">
-      <video id="qr-video" 
-             src="assets/videos/qr-animation.webm"
-             playsinline
-             webkit-playsinline
-             preload="metadata"
-             muted
-             style="object-fit: cover;">
-      </video>
-    </div>
-  </div>
+    <head>
+      <!-- Подключение стилей -->
+      <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+      <!-- Основная разметка -->
+      <div class="frame-1__qrcontainercomponent">
+        <div class="frame-1__qr-container video-wrapper">
+          <video
+            id="qr-video"
+            src="assets/videos/qr-animation.webm"
+            playsinline
+            webkit-playsinline
+            preload="metadata"
+            muted
+            style="object-fit: cover"
+          ></video>
+        </div>
+      </div>
 
-  <!-- Подключение скриптов -->
-  <script src="js/script.js"></script>
-</body>
-   
-
-
-</body>
+      <!-- Подключение скриптов -->
+      <script src="js/script.js"></script>
+    </body>
+  </body>
 </html>
